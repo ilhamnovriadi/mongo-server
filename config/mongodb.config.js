@@ -1,6 +1,7 @@
 const { MongoClient } = require("mongodb");
-const url =
-  "mongodb://ilhamnovriadi:adminadmin@localhost:27017/?authSource=belajarmern";
+const dotenv = require("dotenv");
+dotenv.config();
+const url = process.env.MONGO
 const client = new MongoClient(url);
 
 const dbName = "belajarmern";

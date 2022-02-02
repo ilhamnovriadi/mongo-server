@@ -1,6 +1,7 @@
+const dotenv = require("dotenv");
+dotenv.config();
 const mongoose = require("mongoose");
-const db =
-  "mongodb://ilhamnovriadi:adminadmin@localhost:27017/belajarmern?authSource=belajarmern";
+const db = process.env.MONGO
 
 mongoose
   .connect(db, {
