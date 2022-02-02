@@ -8,6 +8,10 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 
+app.use("/", (req, res) => {
+  res.send("Welcome to Mongo Server by Ilham Novriadi");
+});
+
 app.use("/api/v1", RouterMongoNative);
 app.use("/api/v2", RouterMongoose);
 
